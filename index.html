@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
   <script src="script.js?v=1" defer></script>
 </head>
 <body>
@@ -105,14 +105,19 @@
         </div>
 
         <div class="project-list">
-          <article class="project-card project-featured">
+          <article class="project-card">
             <div class="project-visual visual-risk" aria-hidden="true">
               <div class="terminal-bar"><i></i><i></i><i></i><span>risk.matrix / assessment</span></div>
-              <div class="risk-chart">
-                <div><span>Access control</span><b style="--value: 72%"></b><em>72</em></div>
-                <div><span>Incident response</span><b style="--value: 46%"></b><em>46</em></div>
-                <div><span>Asset security</span><b style="--value: 84%"></b><em>84</em></div>
-                <div><span>Governance</span><b style="--value: 63%"></b><em>63</em></div>
+              <div class="risk-matrix">
+                <span class="axis axis-y">Likelihood</span>
+                <div class="matrix-grid">
+                  <i class="risk-low">L</i><i class="risk-low">L</i><i class="risk-medium">M</i><i class="risk-medium">M</i>
+                  <i class="risk-low">L</i><i class="risk-medium">M</i><i class="risk-medium">M</i><i class="risk-high">H</i>
+                  <i class="risk-medium">M</i><i class="risk-medium">M</i><i class="risk-high">H</i><i class="risk-high">H</i>
+                  <i class="risk-medium">M</i><i class="risk-high">H</i><i class="risk-high">H</i><i class="risk-critical">C</i>
+                </div>
+                <span class="axis axis-x">Impact</span>
+                <div class="matrix-scale"><span>Low</span><span>Moderate</span><span>High</span><span>Critical</span></div>
               </div>
             </div>
             <div class="project-content">
@@ -359,7 +364,6 @@
   <footer>
     <div class="container footer-inner">
       <p>© 2026 Diogo Andrade</p>
-      <p>Built with HTML & CSS · Hosted on GitHub Pages</p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
