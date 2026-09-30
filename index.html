@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,12 +34,17 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container hero-grid">
+      <div class="container hero-layout">
         <div class="hero-copy">
-          <p class="terminal-path"><span>diogo@portfolio</span>:~$ whoami</p>
-          <h1>Diogo<br><span>Andrade</span><i class="cursor" aria-hidden="true"></i></h1>
-          <p class="role-line"><span aria-hidden="true">&gt;</span> Computer Engineer <b>|</b> MSc in Cybersecurity &amp; Digital Forensics</p>
-          <p class="hero-intro">I assess systems, investigate threats and turn complex security findings into clear, practical improvements.</p>
+          <p class="hero-name"><span aria-hidden="true">//</span> Diogo Andrade</p>
+          <h1>
+            <span class="hero-title-solid">Computer Engineer</span>
+            <span class="hero-title-outline">MSc in Cybersecurity<br>&amp; Digital Forensics</span>
+          </h1>
+          <div class="hero-summary">
+            <p>I assess systems, investigate threats and turn complex security findings into clear, practical improvements.</p>
+            <p class="hero-location"><span></span> Based in Portugal</p>
+          </div>
           <div class="hero-actions">
             <a class="button primary" href="#work">View selected work <span aria-hidden="true">↘</span></a>
             <a class="button secondary" href="mailto:psvdiogo@gmail.com">Contact me</a>
@@ -50,26 +55,24 @@
           </div>
         </div>
 
-        <aside class="profile-terminal" aria-label="Professional profile terminal">
-          <div class="terminal-titlebar">
-            <div aria-hidden="true"><i></i><i></i><i></i></div>
-            <span>profile.sh</span>
-            <span>bash</span>
+        <div class="hero-stats" aria-label="Professional highlights">
+          <div>
+            <strong>80<span>+</span></strong>
+            <p>organisations assessed</p>
           </div>
-          <div class="terminal-body">
-            <p class="command"><span>diogo@portfolio:~$</span> cat profile.txt</p>
-            <dl>
-              <div><dt>location</dt><dd>Portugal</dd></div>
-              <div><dt>focus</dt><dd>Cybersecurity · SOC · GRC</dd></div>
-              <div><dt>experience</dt><dd>80+ organisation assessments</dd></div>
-              <div><dt>research</dt><dd>211K+ SIEM events</dd></div>
-              <div><dt>languages</dt><dd>Portuguese · English</dd></div>
-            </dl>
-            <p class="command terminal-command-last"><span>diogo@portfolio:~$</span> ./status</p>
-            <p class="terminal-response"><i></i> Ready for the next challenge.</p>
-            <p class="terminal-prompt" aria-hidden="true"><span>diogo@portfolio:~$</span> <b></b></p>
+          <div>
+            <strong>211K<span>+</span></strong>
+            <p>SIEM events analysed</p>
           </div>
-        </aside>
+          <div>
+            <strong>18<span>/20</span></strong>
+            <p>final degree project</p>
+          </div>
+          <div class="hero-focus">
+            <p>Focus areas</p>
+            <strong>Security · SOC · GRC</strong>
+          </div>
+        </div>
       </div>
     </section>
 
