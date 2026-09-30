@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Diogo Andrade — Cybersecurity, systems and software engineering portfolio.">
+  <meta name="theme-color" content="#07111f">
+  <title>Diogo Andrade | Cybersecurity & Systems</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Diogo Andrade, home">
+        <span class="brand-mark" aria-hidden="true">DA</span>
+        <span>Diogo Andrade</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-cta" href="mailto:psvdiogo@gmail.com">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Open to cybersecurity opportunities</p>
+          <h1>Turning security findings into <span>clear, practical action.</span></h1>
+          <p class="hero-intro">Computer Engineer specialising in Cybersecurity and Digital Forensics, with experience in security assessments, applied research, secure development and technical education.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="button secondary" href="mailto:psvdiogo@gmail.com">Email me</a>
+          </div>
+          <div class="social-links" aria-label="Social profiles">
+            <a href="https://github.com/DiogoMA2002" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/diogo-andrade-851185274/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Professional highlights">
+          <div class="panel-topline"><span>SELECTED IMPACT</span><span>2024—2026</span></div>
+          <div class="metric featured">
+            <strong>80<span>+</span></strong>
+            <p>organisations assessed for cybersecurity maturity</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric">
+              <strong>211K<span>+</span></strong>
+              <p>SIEM events analysed</p>
+            </div>
+            <div class="metric">
+              <strong>18<span>/20</span></strong>
+              <p>final degree project</p>
+            </div>
+          </div>
+          <div class="panel-footer"><span>Based in Portugal</span><span class="pulse">Available</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split-heading">
+        <div>
+          <p class="section-kicker">01 / About</p>
+          <h2>Security with context.</h2>
+        </div>
+        <div class="about-copy">
+          <p>I work at the intersection of cybersecurity, infrastructure and software. My focus is understanding the real problem behind a technical finding and communicating a solution that people can actually implement.</p>
+          <p>My project portfolio spans GRC, SIEM, threat detection, malware analysis, penetration testing, digital forensics, systems administration, networking and full-stack development.</p>
+          <ul class="skill-list" aria-label="Core skills">
+            <li>Security Assessment</li>
+            <li>GRC & Risk</li>
+            <li>SIEM & Detection</li>
+            <li>Digital Forensics</li>
+            <li>Linux & Windows</li>
+            <li>Secure Development</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="work">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">02 / Selected work</p>
+            <h2>Projects with measurable depth.</h2>
+          </div>
+          <p>A selection of applied security, detection and software engineering work.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card project-featured">
+            <div class="project-visual visual-risk" aria-hidden="true">
+              <div class="terminal-bar"><i></i><i></i><i></i><span>risk.matrix / assessment</span></div>
+              <div class="risk-chart">
+                <div><span>Access control</span><b style="--value: 72%"></b><em>72</em></div>
+                <div><span>Incident response</span><b style="--value: 46%"></b><em>46</em></div>
+                <div><span>Asset security</span><b style="--value: 84%"></b><em>84</em></div>
+                <div><span>Governance</span><b style="--value: 63%"></b><em>63</em></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <p class="project-type">Full-stack · Application Security</p>
+              <h3>Risk Matrix</h3>
+              <p>A platform that guides organisations through structured cybersecurity assessments, calculates risk by category and exports formatted reports. Built with separate public and administrative workflows and security controls including JWT, rate limiting, CSP and token revocation.</p>
+              <ul class="tags"><li>Spring Boot</li><li>Vue.js</li><li>PostgreSQL</li><li>JWT</li></ul>
+              <a class="text-link" href="https://github.com/DiogoMA2002/risk_matrix" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual visual-siem" aria-hidden="true">
+              <div class="terminal-bar"><i></i><i></i><i></i><span>wazuh / event stream</span></div>
+              <div class="event-stream">
+                <span style="--w: 78%"></span><span style="--w: 48%"></span><span class="alert" style="--w: 92%"></span>
+                <span style="--w: 64%"></span><span class="alert" style="--w: 56%"></span><span style="--w: 84%"></span>
+              </div>
+              <strong>211,000+ <small>EVENTS</small></strong>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02</div>
+              <p class="project-type">SIEM · Threat Detection</p>
+              <h3>Wazuh Detection Lab</h3>
+              <p>Designed a multi-host SIEM laboratory, generated benign and controlled adversarial activity, created custom detection rules and built a labelled dataset with more than 211,000 events.</p>
+              <ul class="tags"><li>Wazuh</li><li>Linux</li><li>Python</li><li>Power BI</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual visual-yara" aria-hidden="true">
+              <div class="terminal-bar"><i></i><i></i><i></i><span>rule.remcos_detection</span></div>
+              <pre><code><span>rule</span> remcos_behavior {
+  strings:
+    $keylog = <b>"GetAsyncKeyState"</b>
+    $db     = <b>"SQLite format 3"</b>
+  condition:
+    <span>2 of them</span>
+}</code></pre>
+            </div>
+            <div class="project-content">
+              <div class="project-number">03</div>
+              <p class="project-type">Malware Analysis · Threat Hunting</p>
+              <h3>YARA Detection Research</h3>
+              <p>Investigated a Remcos RAT sample through static and network analysis, extracted indicators and developed host, executable and network-oriented YARA detection rules.</p>
+              <ul class="tags"><li>YARA</li><li>FLOSS</li><li>Wireshark</li><li>PE Analysis</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual visual-forensics" aria-hidden="true">
+              <div class="terminal-bar"><i></i><i></i><i></i><span>forensics / evidence</span></div>
+              <div class="evidence-grid">
+                <div><span>01</span><b>DISK IMAGE</b><small>verified</small></div>
+                <div><span>02</span><b>WINDOWS</b><small>artefacts</small></div>
+                <div><span>03</span><b>ANDROID</b><small>extraction</small></div>
+                <div><span>04</span><b>TIMELINE</b><small>correlated</small></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-number">04</div>
+              <p class="project-type">Digital Forensics · Evidence Analysis</p>
+              <h3>Digital Media Examination</h3>
+              <p>Performed structured forensic examination of computer drives and mobile devices, from validated acquisition to artefact correlation and evidence-supported reporting.</p>
+              <ul class="tags"><li>Autopsy</li><li>FTK Imager</li><li>Android</li><li>Windows</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading experience-heading">
+          <div>
+            <p class="section-kicker">03 / Experience</p>
+            <h2>Applied work & education.</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article>
+            <div class="timeline-date">2024—2026</div>
+            <div>
+              <p class="timeline-org">Cybersecurity Competence Centre</p>
+              <h3>Cybersecurity Researcher</h3>
+              <p>Conducted diagnostics and maturity assessments across 80+ organisations, translating technical and organisational findings into prioritised recommendations and tailored improvement plans.</p>
+            </div>
+            <span class="timeline-location">Portugal · Hybrid</span>
+          </article>
+          <article>
+            <div class="timeline-date">2025—2026</div>
+            <div>
+              <p class="timeline-org">Polytechnic Institute of Leiria</p>
+              <h3>Invited Teaching Assistant</h3>
+              <p>Taught and supported practical work across systems administration, operating systems, databases and computer technology.</p>
+            </div>
+            <span class="timeline-location">Leiria · On-site</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner">
+        <p class="section-kicker">04 / Contact</p>
+        <h2>Let’s make security<br><span>clear and actionable.</span></h2>
+        <p>I’m open to cybersecurity, SOC, security engineering and GRC opportunities.</p>
+        <a class="button primary large" href="mailto:psvdiogo@gmail.com">psvdiogo@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 Diogo Andrade</p>
+      <p>Built with HTML & CSS · Hosted on GitHub Pages</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
