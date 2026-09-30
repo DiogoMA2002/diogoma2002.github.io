@@ -152,6 +152,75 @@ h2 { margin: 14px 0 0; font-family: var(--display); font-size: clamp(2.7rem,5.5v
 footer { background: var(--bg); } .footer-inner { min-height: 92px; display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: .57rem; letter-spacing: .05em; text-transform: uppercase; } .footer-inner p { margin: 0; } .footer-inner a:hover { color: var(--acid); }
 
 @keyframes blink { 50% { opacity: .25; } }
+
+/* Motion system — activated progressively by script.js */
+.scroll-progress {
+  position: fixed; inset: 0 auto auto 0; z-index: 40; width: 100%; height: 3px;
+  pointer-events: none; transform: scaleX(0); transform-origin: left center;
+  background: var(--acid); will-change: transform;
+}
+.site-header { transition: background .25s ease, min-height .25s ease; }
+.site-header.is-compact { background: rgba(10,10,8,.98); }
+.site-header.is-compact .nav-wrap { min-height: 54px; }
+.nav-wrap { transition: min-height .25s ease; }
+
+.motion-ready .reveal {
+  opacity: 0; transform: translateY(34px); filter: blur(3px);
+  transition: opacity .65s cubic-bezier(.2,.75,.2,1), transform .65s cubic-bezier(.2,.75,.2,1), filter .65s ease;
+  transition-delay: var(--reveal-delay, 0ms); will-change: opacity, transform;
+}
+.motion-ready .reveal.reveal-left { transform: translateX(-34px); }
+.motion-ready .reveal.is-visible { opacity: 1; transform: translate(0,0); filter: blur(0); }
+
+.motion-ready .hero-name,
+.motion-ready h1 > span,
+.motion-ready .hero-summary,
+.motion-ready .hero-actions,
+.motion-ready .social-links {
+  opacity: 0; transform: translateY(24px);
+  animation: hero-in .65s cubic-bezier(.2,.75,.2,1) forwards;
+}
+.motion-ready .hero-name { animation-delay: .08s; }
+.motion-ready h1 > span:first-child { animation-delay: .16s; }
+.motion-ready h1 > span:last-child { animation-delay: .26s; }
+.motion-ready .hero-summary { animation-delay: .36s; }
+.motion-ready .hero-actions { animation-delay: .44s; }
+.motion-ready .social-links { animation-delay: .5s; }
+@keyframes hero-in { to { opacity: 1; transform: translateY(0); } }
+
+.motion-ready .project-card.reveal { transition-duration: .72s; }
+.motion-ready .project-card.reveal.is-visible .terminal-bar i:first-child { animation: status-pulse 1.2s steps(2) 1; }
+.motion-ready .project-card.reveal .risk-chart b::after,
+.motion-ready .project-card.reveal .event-stream span::before { transform: scaleX(0); transform-origin: left; }
+.motion-ready .project-card.reveal.is-visible .risk-chart b::after,
+.motion-ready .project-card.reveal.is-visible .event-stream span::before { animation: data-load .8s cubic-bezier(.2,.75,.2,1) .28s forwards; }
+.motion-ready .project-card.reveal .network-node,
+.motion-ready .project-card.reveal .cluster-master,
+.motion-ready .project-card.reveal .cluster-workers > div,
+.motion-ready .project-card.reveal .router-core,
+.motion-ready .project-card.reveal .router-modules > span,
+.motion-ready .project-card.reveal .iot-flow > * { opacity: 0; transform: translateY(8px); }
+.motion-ready .project-card.reveal.is-visible .network-node,
+.motion-ready .project-card.reveal.is-visible .cluster-master,
+.motion-ready .project-card.reveal.is-visible .cluster-workers > div,
+.motion-ready .project-card.reveal.is-visible .router-core,
+.motion-ready .project-card.reveal.is-visible .router-modules > span,
+.motion-ready .project-card.reveal.is-visible .iot-flow > * {
+  animation: module-online .42s ease forwards; animation-delay: calc(.22s + var(--module-delay, 0ms));
+}
+.network-node:nth-of-type(2), .cluster-workers > div:nth-child(2), .router-modules > span:nth-child(2), .iot-flow > *:nth-child(2) { --module-delay: 90ms; }
+.network-node:nth-of-type(3), .cluster-workers > div:nth-child(3), .router-modules > span:nth-child(3), .iot-flow > *:nth-child(3) { --module-delay: 180ms; }
+.router-modules > span:nth-child(4), .iot-flow > *:nth-child(4) { --module-delay: 270ms; }
+.router-modules > span:nth-child(5), .iot-flow > *:nth-child(5) { --module-delay: 360ms; }
+.router-modules > span:nth-child(6) { --module-delay: 450ms; }
+@keyframes data-load { to { transform: scaleX(1); } }
+@keyframes module-online { to { opacity: 1; transform: translateY(0); } }
+@keyframes status-pulse { 50% { background: var(--ink); border-color: var(--ink); } }
+
+.motion-ready .background-item.reveal { border-color: transparent; }
+.motion-ready .background-item.reveal.is-visible { border-color: var(--line); }
+.motion-ready .contact-section.is-visible::after { animation: available-in .9s cubic-bezier(.2,.75,.2,1) forwards; }
+@keyframes available-in { from { transform: translateX(8%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 @media (max-width: 900px) {
   nav a:not(.nav-cta) { display: none; } .hero { min-height: auto; padding-top: 130px; } .hero-layout { min-height: 780px; }
   .hero-summary { grid-template-columns: 1fr; gap: 20px; } .hero-stats { grid-template-columns: 1fr 1fr; } .hero-stats>div:nth-child(2) { border-right: 0; } .hero-stats>div:nth-child(3) { grid-column: 1/-1; border-top: 1px solid var(--line-strong); } .hero-stats>div:first-child { padding-left: 26px; }
