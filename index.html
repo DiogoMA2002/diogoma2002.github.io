@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
   <script src="script.js?v=1" defer></script>
 </head>
 <body>
@@ -109,17 +109,26 @@
             <div class="project-visual visual-risk" aria-hidden="true">
               <div class="terminal-bar"><i></i><i></i><i></i><span>risk.matrix / assessment</span></div>
               <div class="risk-matrix">
-                <div class="matrix-axis-title"><span>Likelihood ↓</span><span>Impact →</span></div>
-                <div class="matrix-body">
-                  <div class="matrix-y-labels"><span>Likely</span><span>Possible</span><span>Unlikely</span><span>Rare</span></div>
-                  <div class="matrix-grid">
-                    <i class="risk-low">LOW</i><i class="risk-medium">MOD</i><i class="risk-medium">MOD</i><i class="risk-high">HIGH</i>
-                    <i class="risk-low">LOW</i><i class="risk-medium">MOD</i><i class="risk-high">HIGH</i><i class="risk-high">HIGH</i>
-                    <i class="risk-low">LOW</i><i class="risk-low">LOW</i><i class="risk-medium">MOD</i><i class="risk-high">HIGH</i>
-                    <i class="risk-low">LOW</i><i class="risk-low">LOW</i><i class="risk-medium">MOD</i><i class="risk-critical">CRIT</i>
-                  </div>
+                <div class="matrix-impact-title">Impact →</div>
+                <div class="matrix-grid">
+                  <strong>Likelihood ↓</strong>
+                  <b>Negligible</b><b>Minor</b><b>Moderate</b><b>Major</b><b>Catastrophic</b>
+
+                  <span>Very low</span>
+                  <i class="risk-low">Low</i><i class="risk-low">Low</i><i class="risk-low">Low</i><i class="risk-medium">Medium</i><i class="risk-high">High</i>
+
+                  <span>Low</span>
+                  <i class="risk-low">Low</i><i class="risk-low">Low</i><i class="risk-medium">Medium</i><i class="risk-medium">Medium</i><i class="risk-high">High</i>
+
+                  <span>Medium</span>
+                  <i class="risk-low">Low</i><i class="risk-medium">Medium</i><i class="risk-medium">Medium</i><i class="risk-high">High</i><i class="risk-high">High</i>
+
+                  <span>High</span>
+                  <i class="risk-medium">Medium</i><i class="risk-medium">Medium</i><i class="risk-high">High</i><i class="risk-high">High</i><i class="risk-extreme">Extreme</i>
+
+                  <span>Very high</span>
+                  <i class="risk-medium">Medium</i><i class="risk-medium">Medium</i><i class="risk-high">High</i><i class="risk-extreme">Extreme</i><i class="risk-extreme">Extreme</i>
                 </div>
-                <div class="matrix-scale"><span></span><span>Low</span><span>Moderate</span><span>High</span><span>Critical</span></div>
               </div>
             </div>
             <div class="project-content">
