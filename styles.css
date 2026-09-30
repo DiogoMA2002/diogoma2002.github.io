@@ -113,12 +113,19 @@ h2 { margin: 14px 0 0; font-family: var(--display); font-size: clamp(2.7rem,5.5v
 .pentest-flow div { display: flex; flex: 1; min-width: 0; padding: 14px 8px; flex-direction: column; gap: 4px; border: 1px solid var(--line-strong); text-align: center; }
 .pentest-flow>i { width: 14px; height: 1px; background: var(--acid); }
 .pentest-flow span { color: var(--acid); font-size: .66rem; } .pentest-flow b { font-size: .53rem; } .pentest-flow small { color: var(--muted); font-size: .46rem; }
-.network-diagram { position: relative; height: 205px; margin-top: 22px; }
-.network-node { position: absolute; display: flex; width: 132px; padding: 11px; flex-direction: column; gap: 3px; border: 1px solid var(--line-strong); background: var(--bg); text-align: center; }
+.network-diagram { position: relative; height: 210px; margin-top: 22px; }
+.network-diagram::before { content: ""; position: absolute; left: 50%; top: 60px; width: 1px; height: 48px; background: var(--acid); transform: translateX(-50%); }
+.network-diagram::after { content: ""; position: absolute; left: 20%; right: 20%; top: 107px; height: 1px; background: var(--acid); }
+.network-node { position: absolute; z-index: 2; display: flex; width: 132px; min-height: 54px; padding: 11px; flex-direction: column; justify-content: center; gap: 3px; border: 1px solid var(--line-strong); background: var(--bg); text-align: center; }
 .network-node span,.cluster-view span { color: var(--acid); font-size: .58rem; font-weight: 600; } .network-node small,.cluster-view small { color: var(--muted); font-size: .47rem; }
-.network-node.headquarters { left: 50%; top: 8px; transform: translateX(-50%); } .network-node.branch { bottom: 8px; } .network-node.branch-a { left: 8%; } .network-node.branch-b { right: 8%; }
-.network-line { position: absolute; top: 78px; width: 31%; height: 64px; border-top: 1px solid var(--acid); }
-.network-line.left { left: 19%; border-left: 1px solid var(--acid); transform: skewY(-21deg); } .network-line.right { right: 19%; border-right: 1px solid var(--acid); transform: skewY(21deg); }
+.network-node.headquarters { left: calc(50% - 66px); top: 7px; }
+.network-node.branch { bottom: 0; }
+.network-node.branch-a { left: calc(20% - 66px); }
+.network-node.branch-b { right: calc(20% - 66px); }
+.network-line { position: absolute; z-index: 1; top: 107px; width: 1px; height: 49px; background: var(--acid); }
+.network-line.left { left: 20%; }
+.network-line.right { right: 20%; }
+.project-network .project-content h3 { max-width: 500px; font-size: 1.62rem; }
 .query-window { margin-top: 28px; color: var(--muted); font-size: .61rem; line-height: 1.8; } .query-window>p { margin: 0; } .query-window>p span { color: var(--warning); }
 .query-result { display: grid; grid-template-columns: auto 1fr; margin-top: 20px; padding: 13px; border: 1px solid var(--line-strong); }
 .query-result i { grid-row: 1/3; width: 8px; height: 8px; margin: 7px 12px 0 0; background: var(--acid); } .query-result b { color: var(--ink); font-weight: 500; } .query-result small { color: var(--muted); }
@@ -237,7 +244,11 @@ footer { background: var(--bg); } .footer-inner { min-height: 92px; display: fle
   .project-list { grid-template-columns: 1fr; } .project-featured { grid-column: auto; } .project-card { min-height: auto; } .project-content { min-height: 360px; padding: 29px 22px; } .project-number { right: 20px; }
   .risk-chart { width: 100%; margin: 50px auto; } .risk-chart div { grid-template-columns: 98px 1fr 24px; gap: 7px; }
   .pentest-flow { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 28px; } .pentest-flow>i { display: none; }
-  .network-node.branch-a { left: 0; } .network-node.branch-b { right: 0; } .iot-flow { gap: 5px; } .iot-flow div { min-width: 76px; padding-inline: 5px; } .router-view { grid-template-columns: 96px 1fr; gap: 10px; }
+  .network-diagram::after { left: 22%; right: 22%; }
+  .network-node.branch-a { left: calc(22% - 66px); } .network-node.branch-b { right: calc(22% - 66px); }
+  .network-line.left { left: 22%; } .network-line.right { right: 22%; }
+  .project-network .project-content h3 { font-size: 1.45rem; }
+  .iot-flow { gap: 5px; } .iot-flow div { min-width: 76px; padding-inline: 5px; } .router-view { grid-template-columns: 96px 1fr; gap: 10px; }
   .background-column { padding: 0 22px 24px; } .background-label { margin-inline: -22px; padding-inline: 22px; }
   .contact-section { padding: 96px 0 130px; } .footer-inner { gap: 14px; padding: 26px 0; flex-direction: column; text-align: center; }
 }
